@@ -1,0 +1,76 @@
+version: "2.0"
+
+intents:
+  - greet
+  - bot_challenge
+  - justbook
+  - time
+  - when
+  - book_day_time_given
+  - book_time_given
+  - book_date_given
+  - delete_reservation
+  - id_check
+
+actions:
+    - action_hello_world
+    - action_confirm_just_booking
+    - action_confirm_Day_Time_Given
+    - action_delete_res
+
+
+
+slots:
+  time:
+    type: text
+  number_of_people:
+    type: text
+  date:
+    type: text
+  id:
+    type: float
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_time:
+  - text: "What time do you want to book (Mention am/pm)? Ex: 7 pm/ 8 pm"
+  utter_help:
+  - text: "How Can I help you?"
+
+  utter_when:
+  - text: "For when do you want me to book it ? [Today, Tomorrow or Day After Tomorrow?]"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+  
+
+  utter_confirm:
+  - text: "Your booking is confirmed for {number_of_people} on {date} at {time}. Thank You. See you soon"
+
+  utter_happy:
+  - text: "Great, carry on!"
+  utter_askid:
+  - text: "Enter your Booking ID!"
+  utter_goodbye:
+  - text: "Bye"
+  utter_thankyou:
+  - text: 'Thank You. Have a Nice Day '
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+entities:
+  - time
+  - date
+  - id
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
