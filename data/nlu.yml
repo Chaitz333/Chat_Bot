@@ -1,0 +1,167 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hi
+    - Hi
+    - Hello
+    - hello
+    - good morning
+    - good evening
+    - hey
+    - Hey
+
+- intent: justbook
+  examples: |
+    - table for 1
+    - make reservations for me
+    - make reservations for 1 person
+    - book table for me
+    - reserve table for 1 person
+    - reserve table for me
+    - can you book a table for me
+    - please reserve a table 
+    - please book a table for me
+    - please book a table
+    - please reserve a table
+    - book a table
+    - reserve a table
+    - table for me
+    - reserve for me
+    - table for [today](date)
+    - make reservations for [today](date)
+    - make reservations for [today](date)
+    - book table for [today](date)
+    - reserve table for [today](date)
+    - can you book a table for [today](date)
+    - please reserve table for [today](date)
+    - reserve table for [today](date)
+    - please book table for me [today](date)
+    - please book table [today](date)
+    - please reserve table for [today](date)
+    - book table for [today](date)
+    - reserve a table for [today](date)
+    - table for [today](date)
+    - reserve for [today](date)
+    - need table at [7 am](time)
+    - make reservations at [7 am](time)
+
+    - make reservations for [7 am](time)
+    - book table for [7 am](time)
+    - reserve table for [7 am](time)
+    - can you book a table for me at [7 am](time)
+    - please reserve table for me at [7 am](time)
+    - reserve table for me at  [7 am](time)
+    - please book table for me on [7 am](time)
+    - please book table at [7 am](time)
+    - please reserve table for [7 am](time)
+    - book table for [7 am](time)
+    - reserve a table for [7 am](time)
+    - table at [7 am](time)
+    - reserve for [7 am](time)
+
+
+
+
+- intent: book_day_time_given
+  examples: |
+    - table for [today](date) on [7 am](time)
+    - make reservations for [today](date) on [7 am](time)
+    - make reservations for [today](date) on [7 am](time)
+    - book table for [today](date) on [7 am](time)
+    - reserve table for [today](date) on [7 am](time)
+    - can you book a table for [today](date) on [7 am](time)
+    - please reserve table for [today](date) on [7 am](time)
+    - reserve table for [today](date) on [7 am](time)
+    - please book table  for me [today](date) on [7 am](time)
+    - please book table [today](date) on [7 am](time)
+    - please reserve table for [today](date) on [7 am](time)
+    - book table for [today](date) on [7 am](time)
+    - reserve a table for [today](date) on [7 am](time)
+    - table for [today](date) on [7 am](time)
+    - reserve for [today](date) on [7 am](time)
+    - table at  [7 am](time) for [today](date)  
+    - make reservations for me at [7 am](time) [today](date) 
+    - make reservations at [7 am](time) [today](date) 
+    - book table for  [7 am](time) for [today](date) 
+    - reserve table for me at  [7 am](time) [today](date) 
+    - can you book a table at [7 am](time) for [today](date)
+
+
+- intent: delete_reservation
+  examples: |
+    - cancel my reservations
+    - cancel my booking 
+    - delete my reservation 
+    - cancel booking
+    - cancel reservation
+    - delete booking
+    - delete reservation
+- intent: id_check
+  examples: |
+    - id is [1232421123](id)
+    - id  [1232421123](id)
+    - [1238901123](id)
+    - [1200021123](id)
+    - take it [12768921123](id)
+    - id  [1232420023](id)
+
+- intent: time
+  examples: |
+    - [7 am](time)
+    - [8 am](time)
+    - [9 am](time)
+    - [10 am](time)
+    - [11 am](time)
+    - [12 pm](time)
+    - [1 pm](time)
+    - [2 pm](time)
+    - [3 pm](time)
+    - [4 pm](time)
+    - [5 pm](time)
+    - [6 pm](time)
+    - [7 pm](time)
+    - [8 pm](time)
+    - [9 pm](time)
+    - [10 pm](time)
+    - [11 pm](time)
+    - [12 pm](time)
+
+
+- intent: when
+  examples: |
+    - [today](date)
+    - [tomorrow](date)
+    - [day after tomorrow](date)
+    - [today](date)
+    - [tomorrow](date)
+    - [today](date)
+    - [tomorrow](date)
+    - [day after tomorrow](date)
+
+    
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+    
+
+

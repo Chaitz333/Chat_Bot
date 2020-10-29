@@ -1,0 +1,51 @@
+version: "2.0"
+
+stories:
+
+- story: Just_Booking
+  steps:
+  - intent: greet
+  
+  - action: utter_help
+  - intent: justbook
+  - action: utter_time 
+  - intent: time
+    entities:
+    - time: "7 am"
+  - action: utter_when
+  - intent: when 
+    entities:
+      - date: "today" 
+  - action: action_confirm_just_booking
+  - action: utter_thankyou
+  - action: action_restart
+
+
+- story: Day_Time_Given
+  steps:
+  - intent: greet
+  
+  - action: utter_help
+  - intent: book_day_time_given
+    entities:
+      - date: "today"
+      - time: "7 pm" 
+    
+  - action: action_confirm_Day_Time_Given
+  - action: utter_thankyou
+  - action: action_restart
+
+- story: cancel
+  steps:
+  - intent: greet
+ 
+  - action: utter_help
+  - intent: delete_reservation
+  - action: utter_askid
+  - intent: id_check
+    entities:
+      - id: 1234567891
+
+  - action: action_delete_res
+  - action: utter_thankyou
+  - action: action_restart
