@@ -1,5 +1,4 @@
 # This file contains the different endpoints your bot can use.
-
 # Server where the models are pulled from.
 # https://rasa.com/docs/rasa/model-storage#fetching-models-from-a-server
 
